@@ -13,7 +13,7 @@ const Navbar = () => {
                     <li>Home</li>
                     <li>About</li>
                     <li>Recipes</li>
-                    <li>Saved</li>
+                    <li>Categories</li>
                     <li>Profile</li>
 
                     <button className="bg-accent text-white px-6 py-2 rounded-3xl ">SignUp</button>
