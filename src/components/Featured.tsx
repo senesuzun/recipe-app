@@ -3,6 +3,7 @@
 import React from "react";
 import Dash from "@/components/Dash";
 import Image from "next/image";
+import Link from "next/link";
 const Featured = () => {
     return (
         <div className="container pt-40">
@@ -34,7 +35,9 @@ const Featured = () => {
                             walnuts covered in honey syrup. You'll love this suprisingly easy to make dessert!
                         </p>
                         <button className="bg-accent text-white px-6 py-2 rounded-3xl text-[14px] sm:text-[16px]">
-                            View More
+                            <Link href="http://localhost:3000/recipes">
+                                View More
+                            </Link>
                         </button>
                     </div>
                 </div>
@@ -54,7 +57,9 @@ const Featured = () => {
                             These are best when cooled and with extra lemon juice.
                         </p>
                         <button className="bg-accent text-white px-6 py-2 rounded-3xl text-[14px] sm:text-[16px]">
-                            View More
+                            <Link href="http://localhost:3000/recipes">
+                                View More
+                            </Link>
                         </button>
                     </div>
                 </div>
@@ -76,7 +81,9 @@ const Featured = () => {
                             they are similar to a meat ravioli or tortellini.
                         </p>
                         <button className="bg-accent text-white px-6 py-2 rounded-3xl text-[14px] sm:text-[16px]">
-                            View More
+                            <Link href="http://localhost:3000/recipes">
+                                View More
+                            </Link>
                         </button>
                     </div>
                 </div>

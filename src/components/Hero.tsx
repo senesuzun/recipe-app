@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 const Hero = () => {
     return (
         <div className="relative min-h-screen">
@@ -25,7 +26,9 @@ const Hero = () => {
                     </p>
 
                     <button className="bg-accent text-white px-6 py-2 rounded-3xl text-[14px] sm:text-[16px]">
-                        View More
+                        <Link href="http://localhost:3000/recipes">
+                           View More
+                        </Link>
                     </button>
 
                 </div>
