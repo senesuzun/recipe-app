@@ -10,9 +10,8 @@ const Footer = () => {
                 <div className="space-y-4">
                     <h2 className="text-xl font-bold">About Us</h2>
                     <p className="leading-[1,8]">
-                        jnrge lrgergeio rgnergn ergner gnelrngengn
-                        jdnlng ksjngjj fkjsj ksdksj sjnfls nkjsnf
-                        sjfnsfn sfnlksnfl  slnflskf lekfmlskefl slf llkf .
+                       You can find best recipes in our website. There are lots of recipes and
+                        you can choose category to find recipes easier.
                     </p>
                 </div>
 
@@ -20,7 +19,6 @@ const Footer = () => {
                     <h2 className="text-xl font-bold">Recipes</h2>
                     <ul className="space-y-2">
                         <li>Home</li>
-                        <li>About</li>
                         <li>Recipes</li>
                         <li>Categories</li>
                         <li>Profile</li>

@@ -14,12 +14,15 @@ const Navbar = () => {
                     <li><Link href="http://localhost:3000">
                         Home
                     </Link></li>
-                    <li>About</li>
                     <li> <Link href="http://localhost:3000/recipes">
                         Recipes
                     </Link></li>
-                    <li>Categories</li>
-                    <li>Profile</li>
+                    <li><Link href="http://localhost:3000/category">
+                        Categories
+                    </Link></li>
+                    <li><Link href="http://localhost:3000/profile">
+                        Profile
+                    </Link></li>
 
                     <button className="bg-accent text-white px-6 py-2 rounded-3xl "><Link href="http://localhost:3000/signup">
                         SignUp

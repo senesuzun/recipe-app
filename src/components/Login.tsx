@@ -1,99 +1,71 @@
 import React from 'react';
+import Link from "next/link";
+import {FaFacebookF, FaGoogle, FaLinkedinIn, FaRegEnvelope} from "react-icons/fa";
+import {MdLockOutline} from "react-icons/md";
 
-const Login = () => {
+const SignUp = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-md w-full space-y-8">
-                <div>
-                    <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                        Sign in to your account
-                    </h2>
+        <main>
+            <div className="flex flex-col items-center justify-center min-h-screen py-2 ">
+                <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+                    <div className="bg-white rounded-2xl shadow-2xl flex w-2/3  max-w-4xl">
+                        <div className="w-3/5 p-5">
+                            <div className="text-left font-bold">
+                                <span className="text-accent">Recipe</span>App
+                            </div>
+                            <div className="py-10">
+                                <h2 className="text-3xl font-bold text-accent mb-2"> Sign in to Account</h2>
+                                <div className="border-2 w-10 border-accent inline-block mb-2"></div>
+                                <div className="flex justify-center my-2">
+                                    <a href="#" className="border-2 border-gray-200 rounded-full p-3 mx-1">
+                                        <FaFacebookF className="text-sm"/>
+                                    </a>
+                                    <a href="#" className="border-2 border-gray-200 rounded-full p-3 mx-1">
+                                        <FaLinkedinIn className="text-sm"/>
+                                    </a>
+                                    <a href="#" className="border-2 border-gray-200 rounded-full p-3 mx-1">
+                                        <FaGoogle className="text-sm"/>
+                                    </a>
+                                </div>
+                                <p className="text-gray-400 my-3">or use your email account</p>
+                                <div className="flex flex-col items-center">
+                                    <div className="bg-gray-100 w-64 p-2 flex items-center mb-3">
+                                        <FaRegEnvelope className="text-gray-400 m-2"/>
+                                        <input type="email" name="email" placeholder="Email" className="bg-gray-100 outline-none text-sm flex-1"/>
+                                    </div>
+                                    <div className="bg-gray-100 w-64 p-2 flex items-center mb-3">
+                                        <MdLockOutline className="text-gray-400 m-2"/>
+                                        <input type="password" name="password" placeholder="Password" className="bg-gray-100 outline-none text-sm flex-1"/>
+                                    </div>
+                                    <div className="flex justify-between w-64 mb-5">
+                                        <label className="flex items-center text-xs">
+                                            <input type="checkbox" name="remember" className="mr-1"/>
+                                            Remember me
+                                        </label>
+                                        <a href="#" className="text-xs">Forgot Password?</a>
+                                    </div>
+                                    <a href="#"
+                                       className="border-2 border-accent text-accent rounded-full px-12 py-2 inline-block font-semibold hover:bg-accent hover:text-white"
+                                    >Sign In</a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="w-2/5 bg-accent text-white rounded-tr-2xl rounded-br-2xl py-36 px-12 ">
+                            <h2 className="text-3xl font-bold mb-2"> Welcome!</h2>
+                            <div className="border-2 w-10 border-white inline-block mb-2"></div>
+                            <p className="mb-10">Fill up personal information and start journey with us.</p>
+                            <a href="#"
+                               className="border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-accent"
+                            >Sign Up</a>
+                        </div>
+
+                    </div>
                 </div>
-                <form className="mt-8 space-y-6" action="#" method="POST">
-                    <input type="hidden" name="remember" defaultValue="true" />
-                    <div className="rounded-md shadow-sm -space-y-px">
-                        <div>
-                            <label htmlFor="email-address" className="sr-only">
-                                Email address
-                            </label>
-                            <input
-                                id="email-address"
-                                name="email"
-                                type="email"
-                                autoComplete="email"
-                                required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                                placeholder="Email address"
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="password" className="sr-only">
-                                Password
-                            </label>
-                            <input
-                                id="password"
-                                name="password"
-                                type="password"
-                                autoComplete="current-password"
-                                required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                                placeholder="Password"
-                            />
-                        </div>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                            <input
-                                id="remember-me"
-                                name="remember-me"
-                                type="checkbox"
-                                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                            />
-                            <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                                Remember me
-                            </label>
-                        </div>
-
-                        <div className="text-sm">
-                            <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
-                                Forgot your password?
-                            </a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <button
-                            type="submit"
-                            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                        >
-              <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                <svg
-                    className="h-5 w-5 text-accent-500 group-hover:text-blue-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                >
-                  <path
-                      fillRule="evenodd"
-                      d="M10 3a1 1 0 00-.648.245l-7 5a1 1 0 000 1.51l7 5a1 1 0 001.297-1.248L4.786 9.53l6.564-4.688A1 1 0 0010 3zM3.633 9.147l6.562 4.687A1 1 0 0011 13V7a1 1 0 00-1.805-.593L3.632 9.147z"
-                      clipRule="evenodd"
-                  />
-                  <path
-                      fillRule="evenodd"
-                      d="M12 3a1 1 0 01.648.245l7 5a1 1 0 010 1.51l-7 5a1 1 0 01-1.297-1.248L15.214 9.53l-6.563-4.688A1 1 0 0112 3zM4.805 7.407L11 12.593V7.407L4.805 2.22A1 1 0 003 3v10a1 1 0 001.805.593L11 7.407l5.195 5.186A1 1 0 0017 12V3a1 1 0 00-1.805-.593L11 8.593 4.805 2.407A1 1 0 004 3v4a1 1 0 00.805.993z"
-                      clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-                            Sign in
-                        </button>
-                    </div>
-                </form>
             </div>
-        </div>
+        </main>
     );
 };
 
-export default Login;
+export default SignUp;

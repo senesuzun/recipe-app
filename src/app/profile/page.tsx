@@ -1,11 +1,12 @@
 import Navbar from "@/components/Navbar";
-import SignUp from "@/components/SignUp";
+import Profile from "@/components/Profile";
+
 
 export default function Recipe(){
     return(
         <main>
             <Navbar/>
-            <SignUp/>
+           <Profile/>
         </main>
     );
 }
