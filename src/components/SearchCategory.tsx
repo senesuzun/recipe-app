@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
-const SearchCategory = ({ setName, setRecipes }) => {
+const SearchCategory = ({ setName, setRecipes }:any) => {
     const [search, setSearch] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('');
 
-    const handleCategoryChange = (category) => {
+    const handleCategoryChange = (category:any) => {
         setSelectedCategory(category);
         setName(category);
         searchRecipes(category); // Kategoriye tıklandığında otomatik olarak arama yap
     };
 
-    const searchRecipes = async (category) => {
+    const searchRecipes = async (category:any) => {
         try {
             const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
             if (!res.ok) {

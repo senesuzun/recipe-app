@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div className="container pt-6">
+        <div className="container pt-6 ">
             <div className="flex justify-between items-center">
                 <Image src="/logo6.svg" width={50} height={50} alt="logo"/>
                 <ul className="md:flex hidden gap-8 items-center font-semibold text-[14px]">

@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-const RecipeCard = ({recipe}) => {
+const RecipeCard = ({recipe}:any) => {
     return (
         <Link href={`/recipes/${recipe.idMeal}`}>
             <div className="max-w-sm rounded-lg overflow-hidden border border-gray-300 shadow-md hover:shadow-lg

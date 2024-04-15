@@ -5,8 +5,8 @@ import {FaFacebookF, FaInstagram} from "react-icons/fa";
 import {BsTwitter} from "react-icons/bs";
 const Footer = () => {
     return (
-        <div className="container pt-40">
-            <div className="grid md:grid-cols-3 gap-16">
+        <div className="container pt-40 ">
+            <div className="grid md:grid-cols-3 gap-16 ">
                 <div className="space-y-4">
                     <h2 className="text-xl font-bold">About Us</h2>
                     <p className="leading-[1,8]">

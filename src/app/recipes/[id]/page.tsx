@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Navbar from "@/components/Navbar";
 
-async function getData(id) {
+async function getData(id:number) {
     const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
     if (!res.ok) {
         // This will activate the closest `error.js` Error Boundary
@@ -10,11 +10,14 @@ async function getData(id) {
     return res.json();
 }
 
-export default async function Page({ params }) {
-    const { id } = params;
+type Props={
+    params:number
+}
+export default async function Page({ params }:Props) {
+    // const { id }  = params;
 
     // Fetch data
-    const data = await getData(id);
+    const data = await getData(params);
 
     return (
         <main className="bg-gray-100 min-h-screen">
@@ -60,7 +63,7 @@ export default async function Page({ params }) {
                         <div className="bg-orange-400 mt-8 rounded-lg p-8 shadow-lg">
                             <h2 className="text-xl font-semibold mb-4">Directions:</h2>
                             <ol className="list-decimal pl-6">
-                                {data?.meals[0]?.strInstructions.split('\r\n').map((step, index) => (
+                                {data?.meals[0]?.strInstructions.split('\r\n').map((step:any, index:any) => (
                                     <li key={index} className="mb-2">{step}</li>
                                 ))}
                             </ol>

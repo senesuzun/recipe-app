@@ -42,7 +42,7 @@ console.log(recipes);
                     loading?(<><h1 className="text-center text-3xl">Loading...</h1></>):(<>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {
-                        recipes?.map((recipe) =>(
+                        recipes?.map((recipe:any) =>(
                             <RecipeCard key={recipe?.idMeal} recipe={recipe}/>
                         ))
                     }

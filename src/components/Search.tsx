@@ -1,7 +1,7 @@
 "use client"
 
 import React,{useState} from "react";
-const Search = ({setName,setRecipes}) => {
+const Search = ({setName,setRecipes}:any) => {
     const [categories,setCategories] = useState("");
     const [search, setSearch] = useState('')
 

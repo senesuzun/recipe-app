@@ -32,7 +32,7 @@ const Featured = () => {
                         <h2 className="font-medium text-xl">Baklava</h2>
                         <p className="text-gray-700 text-[14px] xl:text-[16px]">
                             Baklava is made with layers of flaky phyllo pastry and
-                            walnuts covered in honey syrup. You'll love this suprisingly easy to make dessert!
+                            walnuts covered in honey syrup. You will love this suprisingly easy to make dessert!
                         </p>
                         <button className="bg-accent text-white px-6 py-2 rounded-3xl text-[14px] sm:text-[16px]">
                             <Link href="http://localhost:3000/recipes">
@@ -77,7 +77,7 @@ const Featured = () => {
                         <p className="text-gray-700 text-[14px] xl:text-[16px]">
                             Homemade Manti (Traditional Dumplings) make a delicious, comforting and filling meal.
                             Homemade dough is stuffed with mushroom meat stuffing, cooked and served with a garlic-tomato sauce,
-                            yogurt sauce and spicy "butter" sauce. If you are not familiar with Manti,
+                            yogurt sauce and spicy butter sauce. If you are not familiar with Manti,
                             they are similar to a meat ravioli or tortellini.
                         </p>
                         <button className="bg-accent text-white px-6 py-2 rounded-3xl text-[14px] sm:text-[16px]">
