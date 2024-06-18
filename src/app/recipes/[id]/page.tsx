@@ -1,23 +1,21 @@
 import Image from 'next/image';
 import Navbar from "@/components/Navbar";
-import { id } from "postcss-selector-parser";
 
-async function getData(id: number) {
+async function getData(id: string) {
     const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
     if (!res.ok) {
-        // This will activate the closest `error.js` Error Boundary
         throw new Error('Failed to fetch data');
     }
     return res.json();
 }
 
 type Props = {
-    params: number
+    params: {
+        id: string
+    }
 }
-export default async function Page({ params }: Props) {
-    // const { id }  = params;
 
-    // Fetch data
+export default async function Page({ params }: Props) {
     const { id } = params;
     const data = await getData(id);
 
