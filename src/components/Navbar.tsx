@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="container pt-6">
             <div className="flex justify-between items-center">
                 <Image src="/logo6.svg" width={50} height={50} alt="logo"/>
-                <ul className="md:flex hidden gap-8 items-center font-semibold text-[14px] hover:text-gray-500">
+                <ul className="md:flex hidden gap-8 items-center font-semibold text-[14px] hover:text-gray-200">
                     <li className="hover:scale-110 transition-transform duration-200 ease-in-out">
                         <Link href="/">Home</Link>
                     </li>
