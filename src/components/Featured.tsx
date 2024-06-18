@@ -35,7 +35,7 @@ const Featured = () => {
                             walnuts covered in honey syrup. You will love this suprisingly easy to make dessert!
                         </p>
                         <button className="bg-accent text-white px-6 py-2 rounded-3xl text-[14px] sm:text-[16px]">
-                            <Link href="http://localhost:3000/recipes">
+                            <Link href="/recipes">
                                 View More
                             </Link>
                         </button>

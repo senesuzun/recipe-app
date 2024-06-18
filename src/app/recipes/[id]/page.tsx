@@ -22,58 +22,55 @@ export default async function Page({ params }: Props) {
     const data = await getData(id);
 
     return (
-        <main className="bg-gray-100 min-h-screen">
+        <main className="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen text-black">
             <Navbar />
-            <div className="container mx-auto py-8">
-                <h1 className="text-center text-3xl font-bold text-gray-800 mb-8">{data?.meals[0]?.strMeal}</h1>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            <div className="container mx-auto py-8 px-4">
+                <h1 className="text-center text-4xl font-extrabold text-gray-900 mb-10">{data?.meals[0]?.strMeal}</h1>
+                <div className="flex flex-col md:flex-row gap-12 items-start justify-center">
                     {/* Image Section */}
-                    <div className="relative w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+                    <div className="w-full md:w-2/3 lg:w-1/2 mx-auto">
                         <Image
                             src={data?.meals[0]?.strMealThumb}
                             layout="responsive"
-                            width={500}
-                            height={500}
+                            width={700} // Increased width
+                            height={700} // Increased height to maintain aspect ratio
                             objectFit="cover"
                             alt="Meal Image"
-                            className="rounded-lg"
+                            className="rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
                         />
-                    </div>
-
-                    {/* Information Section */}
-                    <div className="w-full md:w-1/2">
-                        <div className="bg-white rounded-lg p-8 shadow-lg">
-                            <h2 className="text-xl text-accent font-semibold mb-4">Ingredients:</h2>
-                            <ul className="list-disc pl-6">
+                        <div className="bg-white p-8 rounded-xl shadow-lg mt-8">
+                            <h2 className="text-2xl text-teal-600 font-bold mb-4">Ingredients</h2>
+                            <ul className="list-disc space-y-2 pl-5 text-gray-700">
                                 {Array.from({ length: 20 }, (_, i) => i + 1).map((index) => {
                                     const ingredient = data?.meals[0][`strIngredient${index}`];
                                     const measurement = data?.meals[0][`strMeasure${index}`];
-
                                     if (ingredient && measurement) {
                                         return (
-                                            <li key={index} className="mb-2">
-                                                <span className="font-semibold">{ingredient}:</span> {measurement}
+                                            <li key={index} className="font-medium">
+                                                {ingredient}: <span className="font-normal">{measurement}</span>
                                             </li>
                                         );
                                     }
-
                                     return null;
                                 })}
                             </ul>
                         </div>
+                    </div>
 
-                        <div className="bg-orange-400 mt-8 rounded-lg p-8 shadow-lg">
-                            <h2 className="text-xl font-semibold mb-4">Directions:</h2>
-                            <ol className="list-decimal pl-6">
-                                {data?.meals[0]?.strInstructions.split('\r\n').map((step: any, index: any) => (
-                                    <li key={index} className="mb-2">{step}</li>
+                    {/* Information Section */}
+                    <div className="w-full md:w-1/3 lg:w-1/2">
+                        <div className="bg-orange-400 p-8 rounded-xl shadow-lg mb-8">
+                            <h2 className="text-2xl font-bold mb-4">Directions</h2>
+                            <ol className="list-decimal space-y-2 pl-5 text-gray-700">
+                                {data?.meals[0]?.strInstructions.split('\r\n').map((step, index) => (
+                                    <li key={index} className="font-medium">{step}</li>
                                 ))}
                             </ol>
                         </div>
 
                         {data?.meals[0]?.strYoutube && (
-                            <div className="mt-8 bg-gray-400 rounded-lg p-8 shadow-lg">
-                                <h2 className="text-xl font-semibold mb-4">YouTube Video:</h2>
+                            <div className="bg-white rounded-xl shadow-lg p-8">
+                                <h2 className="text-2xl font-bold text-blue-600 mb-4">Watch Video</h2>
                                 <div className="aspect-w-16 aspect-h-9">
                                     <iframe
                                         src={data?.meals[0]?.strYoutube.replace('watch?v=', 'embed/')}

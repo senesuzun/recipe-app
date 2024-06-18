@@ -12,8 +12,8 @@ interface propsType {
 
 const CategoryCard: React.FC<propsType> = ({img,title,desc}) => {
     return (
-        <div>
-            <div className="space-y-3 text-center">
+        <div className="bg-white">
+            <div className="space-y-3 text-center bg-white">
                 <Image className="mx-auto"
                        src={img}
                        width={70}

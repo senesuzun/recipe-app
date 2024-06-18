@@ -3,6 +3,7 @@
 import React from "react";
 import {FaFacebookF, FaInstagram} from "react-icons/fa";
 import {BsTwitter} from "react-icons/bs";
+import Link from "next/link";
 const Footer = () => {
     return (
         <div className="container pt-40 ">
@@ -18,10 +19,18 @@ const Footer = () => {
                 <div className="space-y-4">
                     <h2 className="text-xl font-bold">Recipes</h2>
                     <ul className="space-y-2">
-                        <li>Home</li>
-                        <li>Recipes</li>
-                        <li>Categories</li>
-                        <li>Profile</li>
+                        <li className="hover:scale-110 transition-transform duration-200 ease-in-out">
+                            <Link href="/">Home</Link>
+                        </li>
+                        <li className="hover:scale-110 transition-transform duration-200 ease-in-out">
+                            <Link href="/recipes">Recipes</Link>
+                        </li>
+                        <li className="hover:scale-110 transition-transform duration-200 ease-in-out">
+                            <Link href="/category">Categories</Link>
+                        </li>
+                        <li className="hover:scale-110 transition-transform duration-200 ease-in-out">
+                            <Link href="/videos">Videos</Link>
+                        </li>
                     </ul>
                 </div>
 

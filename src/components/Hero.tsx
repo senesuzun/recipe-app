@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 const Hero = () => {
     return (
+
         <div className="relative min-h-screen">
             <Image className="lg:w-[580px] xl:w-[620px] h-auto absolute right-0 to-0 -z-10"
                    src="/main.PNG"

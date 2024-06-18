@@ -33,7 +33,7 @@ export default function Recipe(){
 
     console.log(recipes);
     return(
-        <main>
+        <main className="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen text-white">
             <Navbar/>
             <SearchCategory setName={setName} setRecipes={setRescipes}/>
 
